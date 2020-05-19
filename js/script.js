@@ -30,3 +30,10 @@ order.prototype.price = function () {
   }
   totalCharge = productPrice * this.quqntity;
 };
+order.prototype.orderSummary = function () {
+  return ("<ul>"+
+          "<li> Type: "+ this.type +
+          "<li> Quantity: "+ this.quantity +
+           "<li> charge: "+ this.price() +
+         +"</ul>");
+};
