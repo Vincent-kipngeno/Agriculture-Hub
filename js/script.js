@@ -39,17 +39,28 @@ order.prototype.orderSummary = function () {
            "<li> charge: "+ this.price() +
          +"</ul>");
 };
+function collector (categoryName){
+  var type = $(".animal-products").val();
+  var amount = $(".quantity").val();
+  newOrder = new order (type, amount);
+  productsType = new category(categoryName);
+  productsType.orders.push(newOrder);
+  allCategories.push(productsType);
+};
 
-
+var allCategories = [];
 $(document).ready(function(){
   $(".form1-customers").submit(function(event){
     event.preventDefault();
-    var type = $(".animal-products").val();
-    var amount = $(".quantity").val();
-    newOrder = new order (type, amount);
     var categoryName = "Animal Products: ";
-    animalProducts = new category(categoryName);
-    animalProducts.orders.push(newOrder);
-    $(".charge1-customers").append(newOrder.type + ": Kshs" + newOrder.price());
+    collector(categoryName);
+    $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.price() + "</li>");
+    $(".another-order").show();
+    $(".submit").hide();
+    $(".another-order").off("click").on("click",function(){
+      $(".animal-products").val("");
+      $(".quantity").val("");
+      $(".submit").show();
+    });
   });
 });
