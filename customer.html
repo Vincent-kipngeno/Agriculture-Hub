@@ -27,7 +27,7 @@
           the amount in the following form eggs: trays @30 eggs, beef,mutton, wool and pork: kilograms.</p>
           <form class="form form1-customers">
             <div class="form-group">
-              <select class="form-control animal-products" name="animal-products">
+              <select class="form-control animal-products" name="animal-products" required>
                 <option value=""></option>
                 <option value="Eggs">Eggs @Kshs 360</option>
                 <option value="Beef">Beef @Kshs 300</option>
@@ -37,7 +37,7 @@
               </select>
               <div class="form-group">
                 <label for="quantity">Enter the quantity: </label>
-                <input type="number" name="quantity" class="form-control quantity" value="">
+                <input type="number" name="quantity" class="form-control quantity" value="" required>
               </div>
               <input type="submit" class="submit" name="submit" value="order">
               <button type="button" class="another-order" name="button">PlACE ANOTHER ORDER</button>
