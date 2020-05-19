@@ -37,3 +37,13 @@ order.prototype.orderSummary = function () {
            "<li> charge: "+ this.price() +
          +"</ul>");
 };
+
+
+$(document).ready(function(){
+  $(".form1-customers").submit(function(event){
+    event.preventDefault();
+    var type = $("animal-products").val();
+    var amount = $(".quantity").val();
+    newOrder = new order(type, quantity);
+  });
+});
