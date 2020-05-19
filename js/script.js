@@ -45,5 +45,9 @@ $(document).ready(function(){
     var type = $("animal-products").val();
     var amount = $(".quantity").val();
     newOrder = new order(type, quantity);
+    var categoryName = "Animal Products: ";
+    animalProducts = new category(categoryName);
+    animalProducts.orders.push(newOrder);
+    
   });
 });
