@@ -1,11 +1,12 @@
+
 function category (name){
   this.name = name;
   this.orders = [];
 }
+
 function order (type, quantity){
-  this.name = name;
   this.type = type;
-  this.quantity = quamtity;
+  this.quantity = quantity;
 }
 order.prototype.price = function () {
   var productPrice;
@@ -28,7 +29,8 @@ order.prototype.price = function () {
     default:
       productPrice = 0;
   }
-  totalCharge = productPrice * this.quqntity;
+  totalCharge = productPrice * this.quantity;
+  return totalCharge;
 };
 order.prototype.orderSummary = function () {
   return ("<ul>"+
@@ -42,12 +44,12 @@ order.prototype.orderSummary = function () {
 $(document).ready(function(){
   $(".form1-customers").submit(function(event){
     event.preventDefault();
-    var type = $("animal-products").val();
+    var type = $(".animal-products").val();
     var amount = $(".quantity").val();
-    newOrder = new order(type, quantity);
+    newOrder = new order (type, amount);
     var categoryName = "Animal Products: ";
     animalProducts = new category(categoryName);
     animalProducts.orders.push(newOrder);
-    
+    $(".charge1-customers").append(newOrder.type + ": Kshs" + newOrder.price());
   });
 });
