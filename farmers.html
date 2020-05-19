@@ -16,3 +16,36 @@
     <script type="text/javascript" src="js/script.js"></script>
     <title></title>
   </head>
+  <body>
+    <div class="container">
+      <h1>WELCOME</h1>
+      <div class="row">
+        <div class="col-md-4 0ffset-md-1">
+          <h3>ANIMAL PRODUCTS</h3>
+          <p>Here you are going to find animal products given below: Eggs, beef, mutton, pork, wool.
+          Click on the SUGGEST SUPPLY button below to get the form for supplying your products. Kindly enter
+          the amount in the following form eggs: trays @30 eggs, beef,mutton, wool and pork: kilograms.</p>
+          <form class="form form1-farmers">
+            <div class="form-group">
+              <p>Choose the product:</p>
+              <select class="form-control animal-products" name="animal-products" required>
+                <option value=""></option>
+                <option value="Eggs">Eggs @Kshs 300</option>
+                <option value="Beef">Beef @Kshs 200</option>
+                <option value="Mutton">Mutton @Kshs 250</option>
+                <option value="Pork">Pork @Kshs 300</option>
+                <option value="Wool">Wool @Kshs 100</option>
+              </select>
+              <div class="form-group">
+                <label for="quantity">Enter the quantity: </label>
+                <input type="number" name="quantity" class="form-control quantity" value="" required>
+              </div>
+              <input type="submit" class="submit" name="submit" value="order">
+              <button type="button" class="another-order" name="button">PlACE ANOTHER ORDER</button>
+            </div>
+            <div >
+              <ul class="charge1-customers">
+
+              </ul>
+            </div>
+          </form>
