@@ -1,3 +1,6 @@
 .another-order, .form1-customers, .form1-farmers{
   display: none;
 }
+.another-order, .form3-customers, .form3-farmers{
+  display: none;
+}
