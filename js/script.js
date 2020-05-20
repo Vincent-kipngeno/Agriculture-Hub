@@ -90,5 +90,20 @@ $(document).ready(function(){
       $(".submit").show();
     });
   });
-  
+  $(".showForm1-farmers").click(function(){
+    $(".form1-farmers").toggle();
+  });
+  $(".form1-farmers").submit(function(event){
+    event.preventDefault();
+    var categoryName = "Animal Products: ";
+    collector(categoryName);
+    $(".charge1-farmers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceFarmers() + "</li>");
+    $(".another-order").show();
+    $(".submit").hide();
+    $(".another-order").off("click").on("click",function(){
+      $(".animal-products").val("");
+      $(".quantity").val("");
+      $(".submit").show();
+    });
+  });
 });
