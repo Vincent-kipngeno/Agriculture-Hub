@@ -2,7 +2,6 @@ function category (name){
   this.name = name;
   this.orders = [];
 }
-
 function order (type, quantity){
   this.type = type;
   this.quantity = quantity;
@@ -81,7 +80,7 @@ $(document).ready(function(){
     event.preventDefault();
     var categoryName = "Animal Products: ";
     collector(categoryName);
-    $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.price() + "</li>");
+    $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
     $(".another-order").show();
     $(".submit").hide();
     $(".another-order").off("click").on("click",function(){
