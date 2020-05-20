@@ -25,6 +25,24 @@ order.prototype.priceCustomers = function () {
     case "Wool":
       productPrice = 200;
       break;
+    case "Apples":
+      productPrice = 3000
+      break;
+    case "Oranges":
+      productPrice = 1000
+      break;
+    case "Grapes":
+      productPrice = 1000
+      break;
+    case "Plums":
+      productPrice = 2000
+      break;
+    case "Lemons":
+      productPrice = 2300
+      break;
+    case "Peaches":
+      productPrice = 1500
+      break;
     default:
       productPrice = 0;
   }
@@ -49,8 +67,26 @@ order.prototype.priceFarmers = function () {
     case "Wool":
       productPrice = 100;
       break;
-    default:
-      productPrice = 0;
+      case "Apples":
+        productPrice = 3000
+        break;
+      case "Oranges":
+        productPrice = 1000
+        break;
+      case "Grapes":
+        productPrice = 1000
+        break;
+      case "Plums":
+        productPrice = 2000
+        break;
+      case "Lemons":
+        productPrice = 2300
+        break;
+      case "Peaches":
+        productPrice = 1500
+        break;
+      default:
+        productPrice = 0;
   }
   totalCharge = productPrice * this.quantity;
   return totalCharge;
