@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>WELCOME</h1>
+      <div class="row">
+        <div class="col-md-4 0ffset-md-1">
+          <h3>ANIMAL PRODUCTS</h3>
+          <p>Here you are going to find animal products given below: Eggs, beef, mutton, pork, wool.
+          Click on the SUGGEST SUPPLY button below to get the form for supplying your products. Kindly enter
+          the amount in the following form eggs: trays @30 eggs, beef,mutton, wool and pork: kilograms.</p>
+          <button type="button" class="showForm-farmers" name="button">SUGGEST SUPPLY</button>
+          <form class="form form1-farmers">
+            <div class="form-group">
+              <p>Choose the product:</p>
+              <select class="form-control animal-products" name="animal-products" required>
+                <option value=""></option>
+                <option value="Eggs">Eggs @Kshs 300</option>
+                <option value="Beef">Beef @Kshs 200</option>
+                <option value="Mutton">Mutton @Kshs 250</option>
+                <option value="Pork">Pork @Kshs 300</option>
+                <option value="Wool">Wool @Kshs 100</option>
+              </select>
+              <div class="form-group">
+                <label for="quantity">Enter the quantity: </label>
+                <input type="number" name="quantity" class="form-control quantity" value="" required>
+              </div>
+              <input type="submit" class="submit" name="submit" value="order">
+              <button type="button" class="another-order" name="button">PlACE ANOTHER ORDER</button>
+            </div>
+            <div >
+              <ul class="charge1-customers">
+
+              </ul>
+            </div>
+          </form>
