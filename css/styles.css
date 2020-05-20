@@ -1,3 +1,21 @@
 .another-order{
   display: none;
 }
+#services{
+  padding-top: 30px;
+}
+.card-title{
+  text-align: center;
+  color: green;
+  font-weight: 800;
+}
+.controls-top h2{
+  color: rgb(5, 172, 5);
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-weight: bolder;
+}
+.col-md-12{
+  border-radius: 10%;
+  padding: 10px;
+}
