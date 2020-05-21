@@ -192,6 +192,7 @@ $(document).ready(function(){
   $(".form1-customers").submit(function(event){
     event.preventDefault();
     var categoryName = "Animal Products: ";
+
     collectorAnimals(categoryName);
     $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
     $(".another-order1").show();
@@ -240,6 +241,7 @@ $(document).ready(function(){
 });
 
 //...*fruits section...
+
 function collectorFruits (categoryName){
   var type = $(".fruits").val();
   var amount = parseInt($(".quantity3").val());
@@ -281,6 +283,7 @@ $(document).ready(function(){
   $(".form3-farmers").submit(function(event){
     event.preventDefault();
     var categoryName = "Fruits: ";
+    
     collectorFruits(categoryName);
     $(".charge3-farmers").append("<li>" + newOrder.type + ": Kshs" +  newOrder.priceCustomers() + "</li>");
     $(".another-order3").show();

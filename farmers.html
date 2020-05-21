@@ -110,10 +110,13 @@
             </select>
             <div class="form-group">
               <label for="quantity">Enter the quantity: </label>
+              <input type="number" name="quantity" min="1" class="form-control quantity" value="" required>
               <input type="number" min="1" name="quantity" class="form-control quantity3" value="" required>
               <input type="submit" class="submit3" name="submit" value="supply">
               <button type="button" class="another-order another-order3" name="button">PlACE ANOTHER SUPPLY</button>
             </div>
+            <input type="submit" class="submit" name="submit" value="SUPPLY">
+            <button type="button" class="another-order" name="button">PlACE ANOTHER SUPPLY</button>
           </div>
          </form>
          <div >
@@ -137,7 +140,7 @@
                    <option value=""></option>
                    <option value="Kales">Kales @Ksh 2000</option>
                    <option value="Cabbage">Cabbage @Ksh 1500</option>
-                   <option value="Spinach">Spinach @Ksh 1200</option>
+                   <option value="Spinach">Spinach @Ksh 1200</optio
                    <option value="Lettuce">Lettuce @Ksh 2000</option>
                    <option value="Cauliflower">Cauliflower @Ksh 1500</option>
                    <option value="Coriander">Coriander @Ksh 350</option>
@@ -162,7 +165,7 @@
       <div class="">
         <button type="button" class="checkout-farmers" name="button">CHECKOUT</button>
         <div class="farmer-summary">
-
+          
         </div>
       </div>
     </div>
