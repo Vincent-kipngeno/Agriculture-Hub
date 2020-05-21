@@ -78,14 +78,14 @@ order.prototype.priceCustomers = function () {
     case "Kales":
       productPrice = 2000;
       break;
-    case "Cabbage":
+    case "cabbage":
       productPrice = 1500;
       break;
     case "Spinach":
       productPrice = 1200;
       break;
       case "Lettuce":
-      productPrice = 200;
+      productPrice = 1200;
       break;
     case "Cauliflower":
       productPrice = 1500;
