@@ -217,14 +217,14 @@ order.prototype.orderSummaryCustomers = function () {
   return ("<ul class = 'prizes'>"+
           "<li> Type: "+ this.type + "</li>"+
           "<li> Quantity: "+ this.quantity +"</li>"+
-           "<li> charge:" + "<span class = 'prize'>" + this.priceCustomers()+ "</span>" +"</li>"+
+           "<li> charge: Kshs" + "<span class = 'prize'>" + this.priceCustomers()+ "</span>" +"</li>"+
          "</ul>");
 };
 order.prototype.orderSummaryFamers = function () {
   return ("<ul class = 'pricees'>"+
           "<li> Type: "+ this.type + "</li>"+
           "<li> Quantity: "+ this.quantity +"</li>"+
-           "<li> charge:" + "<span class = 'pricee'>" + this.priceFarmers()+"</span>" + "</li>"+
+           "<li> charge: Kshs" + "<span class = 'pricee'>" + this.priceFarmers()+"</span>" + "</li>"+
          "</ul>");
 };
 
@@ -436,21 +436,21 @@ function collectorLegumes (categoryName){
 
 var allCategories = [];
 $(document).ready(function(){
-  $(".showForm1-customers").click(function(){
-    $(".form1-customers").toggle();
+  $(".showForm4-customers").click(function(){
+    $(".form4-customers").toggle();
   });
-  $(".form1-customers").submit(function(event){
+  $(".form4-customers").submit(function(event){
     event.preventDefault();
-    var categoryName = "Animal Products: ";
+    var categoryName = "Legumes: ";
 
-    collectorAnimals(categoryName);
-    $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
-    $(".another-order1").show();
-    $(".submit1").hide();
-    $(".another-order1").click(function(){
-      $(".animal-products").val("");
-      $(".quantity1").val("");
-      $(".submit1").show();
+    collectorLegumes(categoryName);
+    $(".charge4-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
+    $(".another-order4").show();
+    $(".submit4").hide();
+    $(".another-order4").click(function(){
+      $(".legumes").val("");
+      $(".quantity4").val("");
+      $(".submit4").show();
     });
     $(".checkout-customers").off("click").on("click",function(){
       allCategories.forEach(function(allCategory) {
@@ -462,20 +462,20 @@ $(document).ready(function(){
       allCategories.splice(0, allCategories.length);
     });
   });
-  $(".showForm1-farmers").click(function(){
-    $(".form1-farmers").toggle();
+  $(".showForm4-farmers").click(function(){
+    $(".form4-farmers").toggle();
   });
-  $(".form1-farmers").submit(function(event){
+  $(".form4-farmers").submit(function(event){
     event.preventDefault();
-    var categoryName = "Animal Products: ";
-    collectorAnimals(categoryName);
-    $(".charge1-farmers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceFarmers() + "</li>");
-    $(".another-order1").show();
-    $(".submit1").hide();
-    $(".another-order1").off("click").on("click",function(){
-      $(".animal-products").val("");
-      $(".quantity1").val("");
-      $(".submit1").show();
+    var categoryName = "Legumes: ";
+    collectorLegumes(categoryName);
+    $(".charge4-farmers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceFarmers() + "</li>");
+    $(".another-order4").show();
+    $(".submit4").hide();
+    $(".another-order4").off("click").on("click",function(){
+      $(".legumes").val("");
+      $(".quantity4").val("");
+      $(".submit4").show();
     });
     $(".checkout-farmers").off("click").on("click",function(){
       allCategories.forEach(function(allCategory) {
