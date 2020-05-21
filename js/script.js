@@ -59,7 +59,7 @@ order.prototype.orderSummary = function () {
   return ("<ul>"+
           "<li> Type: "+ this.type +
           "<li> Quantity: "+ this.quantity +
-           "<li> charge: "+ this.price() +
+           "<li> charge: "+ this.price +
          +"</ul>");
 };
 
@@ -81,7 +81,7 @@ $(document).ready(function(){
     event.preventDefault();
     var categoryName = "Animal Products: ";
     collector(categoryName);
-    $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.price() + "</li>");
+    $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
     $(".another-order").show();
     $(".submit").hide();
     $(".another-order").off("click").on("click",function(){
@@ -176,11 +176,11 @@ order.prototype.orderSummary = function () {
   return ("<ul>"+
           "<li> Type: "+ this.type +
           "<li> Quantity: "+ this.quantity +
-           "<li> charge: "+ this.price() +
+           "<li> charge: "+ this.price +
          +"</ul>");
 };
 
-function collector (categoryName){
+function collectorFruits (categoryName){
   var type = $(".fruits").val();
   var amount = $(".quantity").val();
   newOrder = new order (type, amount);
@@ -198,12 +198,12 @@ $(document).ready(function(){
     event.preventDefault();
     var categoryName = "Fruits: ";
     collector(categoryName);
-    $(".charge3-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.price() + "</li>");
+    $(".charge3-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
     $(".another-order").show();
     $(".submit").hide();
     $(".another-order").off("click").on("click",function(){
       $(".fruits").val("");
-      $(".quantity").val("");
+      $(".quantity3").val("");
       $(".submit").show();
     });
   });
@@ -219,7 +219,7 @@ $(document).ready(function(){
     $(".submit").hide();
     $(".another-order").off("click").on("click",function(){
       $(".fruits").val("");
-      $(".quantity").val("");
+      $(".quantity3").val("");
       $(".submit").show();
     });
   });
