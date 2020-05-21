@@ -72,6 +72,24 @@ order.prototype.priceFarmers = function () {
     case "Wool":
       productPrice = 100;
       break;
+    case "Apples":
+      productPrice = 3000;
+      break;
+    case "Oranges":
+      productPrice = 1000;
+      break;
+    case "Grapes":
+      productPrice = 1000;
+      break;
+    case "Plums":
+      productPrice = 2000;
+      break;
+    case "Lemons":
+      productPrice = 2300;
+      break;
+    case "Peaches":
+      productPrice = 1500;
+      break;
     default:
       productPrice = 0;
   }
@@ -132,15 +150,6 @@ $(document).ready(function(){
 });
 
 //...*fruits section...
-/*function category (name){
-  this.name = name;
-  this.orders = [];
-}
-
-function order (type, quantity){
-  this.type = type;
-  this.quantity = quantity;
-}
 order.prototype.priceCustomers = function () {
   var productPrice;
   switch (this.type) {
@@ -171,24 +180,7 @@ order.prototype.priceCustomers = function () {
 order.prototype.priceFarmers = function () {
   var productPrice;
   switch (this.type) {
-    case "Apples":
-      productPrice = 3000;
-      break;
-    case "Oranges":
-      productPrice = 1000;
-      break;
-    case "Grapes":
-      productPrice = 1000;
-      break;
-    case "Plums":
-      productPrice = 2000;
-      break;
-    case "Lemons":
-      productPrice = 2300;
-      break;
-    case "Peaches":
-      productPrice = 1500;
-      break;
+
     default:
       productPrice = 0;
   }
@@ -246,4 +238,4 @@ $(document).ready(function(){
       $(".submit").show();
     });
   });
-});*/
+});
