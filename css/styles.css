@@ -148,7 +148,7 @@ color: white;
     height: 600px;
     color: #black;
     font-weight: bold;
-  
+
   }
   .center{
     text-align: center;
@@ -278,4 +278,10 @@ span.psw {
   }
 .container{
   background-color: green;
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
 }
