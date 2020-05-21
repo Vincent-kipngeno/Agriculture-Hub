@@ -1,5 +1,14 @@
 
 $(document).ready(function(){
+
+    $('.icons').click(function () {
+        $(this).children('.toggle').slideToggle(400);
+        $(this).children('.show').toggle();
+      });
+     });
+
+
+$(document).ready(function(){
    $("button#final-order").click(function(event){
      event.preventDefault();
      let person = $("input#name").val();
