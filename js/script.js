@@ -63,7 +63,7 @@ order.prototype.priceCustomers = function () {
     case "Lemons":
       productPrice = 2300;
       break;
-    case "Peach":
+    case "Peaches":
       productPrice = 1500;
       break;
     default:
@@ -114,13 +114,21 @@ order.prototype.priceFarmers = function () {
   totalCharge = productPrice * this.quantity;
   return totalCharge;
 };
-order.prototype.orderSummary = function () {
-  return ("<ul>"+
+order.prototype.orderSummaryCustomers = function () {
+  return ("<ul class = 'prizes'>"+
           "<li> Type: "+ this.type + "</li>"+
           "<li> Quantity: "+ this.quantity +"</li>"+
-           "<li> charge:" + "</li>"+
+           "<li> charge:" + "<span class = 'prize'>" + this.priceCustomers()+ "</span>" +"</li>"+
          "</ul>");
 };
+order.prototype.orderSummaryFamers = function () {
+  return ("<ul class = 'pricees'>"+
+          "<li> Type: "+ this.type + "</li>"+
+          "<li> Quantity: "+ this.quantity +"</li>"+
+           "<li> charge:" + "<span class = 'pricee'>" + this.priceFarmers()+"</span>" + "</li>"+
+         "</ul>");
+};
+
 
 function collectorAnimals (categoryName){
   var type = $(".animal-products").val();
@@ -149,10 +157,10 @@ $(document).ready(function(){
       $(".submit1").show();
     });
     $(".checkout-customers").off("click").on("click",function(){
-      $(".customer-summary").append(allCategories[1].name);
       allCategories.forEach(function(allCategory) {
+        $(".customer-summary").append(allCategory.name);
           allCategory.orders.forEach(function(order){
-          $(".customer-summary").append(order.orderSummary());
+          $(".customer-summary").append(order.orderSummaryCustomers());
         })
       });
       allCategories.splice(0, allCategories.length);
@@ -174,13 +182,14 @@ $(document).ready(function(){
       $(".submit1").show();
     });
     $(".checkout-farmers").off("click").on("click",function(){
-      $(".farmer-summary").append(allCategories[1].name);
       allCategories.forEach(function(allCategory) {
+        $(".farmer-summary").append(allCategory.name);
           allCategory.orders.forEach(function(order){
-          $(".farmer-summary").append(order.orderSummary());
+          $(".farmer-summary").append(order.orderSummaryFamers());
         })
       });
       allCategories.splice(0, allCategories.length);
+      categoryName = "";
     });
   });
 });
@@ -200,8 +209,8 @@ $(document).ready(function(){
   });
   $(".form3-customers").submit(function(event){
     event.preventDefault();
-    var categoryName = "Fruits: ";
-    collectorFruits(categoryName);
+    var fruitName = "Fruits: ";
+    collectorFruits(fruitName);
     $(".charge3-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
     $(".another-order3").show();
     $(".submit3").hide();
@@ -211,13 +220,14 @@ $(document).ready(function(){
       $(".submit3").show();
     });
     $(".checkout-customers").off("click").on("click",function(){
-      $(".customer-summary").append(allCategories[1].name);
       allCategories.forEach(function(allCategory) {
+        $(".customer-summary").append(allCategory.name);
           allCategory.orders.forEach(function(order){
-          $(".customer-summary").append(order.orderSummary());
+          $(".customer-summary").append(order.orderSummaryCustomers());
         })
       });
       allCategories.splice(0, allCategories.length);
+      fruitName = "";
     });
   });
   $(".showForm3-farmers").click(function(){
@@ -236,10 +246,10 @@ $(document).ready(function(){
       $(".submit3").show();
     });
     $(".checkout-farmers").off("click").on("click",function(){
-      $(".farmer-summary").append(allCategories[1].name);
       allCategories.forEach(function(allCategory) {
+        $(".farmer-summary").append(allCategory.name);
           allCategory.orders.forEach(function(order){
-          $(".farmer-summary").append(order.orderSummary());
+          $(".farmer-summary").append(order.orderSummaryFamers());
         })
       });
       allCategories.splice(0, allCategories.length);
