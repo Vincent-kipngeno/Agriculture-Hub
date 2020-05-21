@@ -164,46 +164,6 @@ order.prototype.priceFarmers = function () {
   return totalCharge;
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 order.prototype.orderSummary = function () {
   return ("<ul>"+
           "<li> Type: "+ this.type +
