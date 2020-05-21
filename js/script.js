@@ -75,6 +75,24 @@ order.prototype.priceCustomers = function () {
     case "Peaches":
       productPrice = 1500;
       break;
+    case "Kales":
+      productPrice = 2000;
+      break;
+    case "cabbage":
+      productPrice = 1500;
+      break;
+    case "Spinach":
+      productPrice = 1200;
+      break;
+      case "Lettuce":
+      productPrice = 1200;
+      break;
+    case "Cauliflower":
+      productPrice = 1500;
+      break;
+    case "coriander":
+      productPrice = 350;
+      break;
     default:
       productPrice = 0;
   }
@@ -116,6 +134,24 @@ order.prototype.priceFarmers = function () {
       break;
     case "Peaches":
       productPrice = 1500;
+      break;
+    case "Kales":
+      productPrice = 2000;
+      break;
+    case "Cabbage":
+      productPrice = 1500;
+      break;
+    case "Spinach":
+      productPrice = 1200;
+      break;
+    case "Lettuce":
+      productPrice = 2000;
+      break;
+    case "Cauliflower":
+      productPrice = 1500;
+      break;
+    case "Coriander":
+      productPrice = 350;
       break;
     default:
       productPrice = 0;
@@ -176,7 +212,7 @@ $(document).ready(function(){
     });
   });
   $(".showForm1-farmers").click(function(){
-    $(".form7-farmers").toggle();
+    $(".form1-farmers").toggle();
   });
   $(".form1-farmers").submit(function(event){
     event.preventDefault();
@@ -266,81 +302,70 @@ $(document).ready(function(){
   });
 });
 
-order.prototype.priceCustomers = function () {
-  var productPrice;
-  switch (this.type) {
-    case "Kales":
-      productPrice = 2000;
-      break;
-    case "Cabbage":
-      productPrice = 1500;
-      break;
-    case "Spinach":
-      productPrice = 1200;
-      break;
-    case "Lettuce":
-      productPrice = 200;
-      break;
-    case "Cauliflower":
-      productPrice = 1500;
-      break;
-    case "coriander":
-      productPrice = 350;
-      break;
-    default:
-      productPrice = 0;
-  }
-  totalCharge = productPrice * this.quantity;
-  return totalCharge;
-};
-
-order.prototype.priceFarmers = function () {
-  var productPrice;
-  switch (this.type) {
-    case "Kales":
-      productPrice = 2000;
-      break;
-    case "Cabbage":
-      productPrice = 1500;
-      break;
-    case "Spinach":
-      productPrice = 1200;
-      break;
-    case "Lettuce":
-      productPrice = 200;
-      break;
-    case "Cauliflower":
-      productPrice = 1500;
-      break;
-    case "coriander":
-      productPrice = 350;
-      break;
-    default:
-      productPrice = 0;
-  }
-  totalCharge = productPrice * this.quantity;
-  return totalCharge;
-};
-
-order.prototype.orderSummary = function () {
-  return ("<ul>"+
-          "<li> Type: "+ this.type +
-          "<li> Quantity: "+ this.quantity +
-           "<li> charge: "+ this.price() +
-         +"</ul>");
-};
-
-
+//Vegetables
 function collectorVegetables (categoryName){
-  var type = $(".vegetable-products").val();
-  var amount = parent($(".quantity").val());
+  var type = $(".vegetables").val();
+  var amount = parseInt($(".quantity2").val());
   newOrder = new order (type, amount);
   productsType = new category(categoryName);
   productsType.orders.push(newOrder);
   allCategories.push(productsType);
 };
 
-var allCategories = [];
+
+$(document).ready(function(){
+  $(".showForm2-customers").click(function(){
+    $(".form2-customers").toggle();
+  });
+  $(".form2-customers").submit(function(event){
+    event.preventDefault();
+    var categoryName = "Vegetables: ";
+    collectorVegetables(categoryName);
+    $(".charge2-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
+    $(".another-order2").show();
+    $(".submit2").hide();
+    $(".another-order2").off("click").on("click",function(){
+      $(".vegetables").val("");
+      $(".quantity2").val("");
+      $(".submit2").show();
+    });
+    $(".checkout-customers").off("click").on("click",function(){
+      allCategories.forEach(function(allCategory) {
+        $(".customer-summary").append(allCategory.name);
+          allCategory.orders.forEach(function(order){
+          $(".customer-summary").append(order.orderSummaryCustomers());
+        })
+      });
+      allCategories.splice(0, allCategories.length);
+    });
+  });
+  $(".showForm2-farmers").click(function(){
+    $(".form2-farmers").toggle();
+  });
+  $(".form2-farmers").submit(function(event){
+    event.preventDefault();
+    var categoryName = "Vegetables: ";
+    collectorVegetables(categoryName);
+    $(".charge2-farmers").append("<li>" + newOrder.type + ": Kshs" +  newOrder.priceFarmers() + "</li>");
+    $(".another-order2").show();
+    $(".submit2").hide();
+    $(".another-order2").off("click").on("click",function(){
+      $(".vegetables").val("");
+      $(".quantity2").val("");
+      $(".submit2").show();
+    });
+    $(".checkout-farmers").off("click").on("click",function(){
+      allCategories.forEach(function(allCategory) {
+        $(".farmer-summary").append(allCategory.name);
+          allCategory.orders.forEach(function(order){
+          $(".farmer-summary").append(order.orderSummaryFamers());
+        })
+      });
+      allCategories.splice(0, allCategories.length);
+    });
+  });
+});
+/*var allCategories = [];
 $(document).ready(function(){
   $(".showForm7-customers").click(function(){
     $(".form7-customers").toggle();
@@ -374,26 +399,4 @@ $(document).ready(function(){
       $(".submit").show();
     });
   });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});*/
