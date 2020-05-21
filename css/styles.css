@@ -1,6 +1,493 @@
-.another-order{
+.another-order, .form1-customers, .form1-farmers, .form3-customers, .form3-farmers{
   display: none;
 }
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Cute+Font|Fredericka the Great");
+@import url("https://fonts.googleapis.com/css?family=Fredericka the Geat");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#first {
+    padding-top: 14%;
+    margin-bottom: 9%;
+}
+#hed {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+h6 {
+    height: 1vh;
+}
+#about {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.resize {
+    font-size: cal(1vh + 1vw + .5vmin);
+}
+#about,
+#service,
+#pple,
+.specific,
+#contact,
+.footer p {
+    font-family: "Fredericka the Great", cursive;
+}
+.col-md-12 {
+    width: 100%;
+    color: #fff;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: calc(1vw + 1vh + .5vmin);
+    font-size: 1.1em;
+}
+h1 {
+    font-family: 'Fredericka the great', cursive;
+}
+#service {
+    color: #fff;
+    margin-bottom: 50px;
+    background-position: center;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+.card-deck {
+    padding: 1% 4%;
+}
+.specific {
+    margin-bottom: 4%;
+}
+.image1 {
+    padding-top: 9%;
+    margin-bottom: 3%;
+}
+.image2 {
+    margin-top: 20%;
+    padding: 35px 0;
+}
+.sermain {
+    margin-top: 15%;
+}
+.hide {
+    display: none;
+}
+.form-cont input {
+    width: 49%;
+    background: transparent;
+}
+.form-cont textarea {
+    margin-top: 10px;
+    width: 100%;
+    background: transparent;
+}
+#contact {
+    padding-top: 100px;
+    margin-bottom: 50px;
+    background-size: cover;
+    background-position: cover;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10%;
+}
+.footer {
+    margin-top: 30px;
+}
+.form-cont {
+    text-align: center;
+    position: relative;
+    width: 700px;
+    max-width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+}
+::placeholder,
+.con {
+    color: #fff;
+}
+::placeholder{
+    font-size: 10px;
+}
+.con {
+    padding-bottom: 30px;
+}
+.what {
+    margin-bottom: 30px;
+}
+#meso {
+    background-color: transparent;
+}
+.social img {
+    border-radius: 50%;
+    transition: 0.2s ease-out;
+}
+.social img:hover {
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    margin: -3px;
+    padding: 3px;
+    background: darkturquoise;
+}
+#portfolio img {
+    width: 100%;
+}
+.card {
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+.card:hover img {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+.card-1 {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.582);
+    cursor: pointer;
+    display: none;
+    transition: all 0.5s ease;
+}
+.ptag {
+    padding: 5% 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.301);
+    padding: 50px 10px;
+    font-weight: 100%;
+    padding-top: 30px;
+    border: 4px solid white;
+    font-size: 1.1em;
+    line-height: 90%;
+    margin: 20% 5%;
+    overflow: hidden;
+    letter-spacing: 2px;
+    font-family: 'Fredericka the great', cursive;
+}
+.text-center{
+  text-align: center;
+}
+@media screen and (max-width:450px) {
+    .form-cont input {
+        width: 100%;
+        margin-top: 10px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+@media screen and (max-width:1024px) {
+    * {
+        font-size: calc(1vw + 1vh + .5vmin);
+    }
+}
+@import url("https://fonts.googleapis.com/css?family=Cute+Font|Cairgette");
+@import url("https://fonts.googleapis.com/css?family=Cairgette");
+html{
+  scroll-behavior: smooth;
+}
+.landing{
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding-top: 17%;
+  font-family: 'Fredericka the Great', Cursive;
+  /* padding-bottom:5%; */
+}
+.landing h1{
+  padding: 2px;
+  margin: 5px;
+}
+.landing p{
+  padding: 2px;
+}
+#logo{
+  margin-top: 12px;
+  margin-bottom: 24px;
+  width: 70px;
+  height: 70px;;
+}
+#mouse-click{
+  padding-top : 22px;
+  margin-top: 10%;
+  padding-bottom: 30px;
+  /* animation-iteration-count: infinite; */
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+}
+.about{
+  text-align: center;
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+.about{
+  color: black;
+}
+  P{
+  font-family: 'Kotta One', cursive;
+}
+#about{
+  font-family: 'Fredericka the Great', Cursive;
+  text-align: center;
+}
+#aboutUs{
+  text-align: center;
+  font-family: 'Fredericka the Great', Cursive;
+}
+.services{
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: multiply;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: white;
+  text-align: center;  padding-top: 70px;
+  font-family: 'Fredericka the Great', cursive;
+}
+.what-we-do .headings{
+  padding-bottom: 38px;
+}
+#portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.services h2{
+  font-family: 'Fredericka the Great', cursive;
+}
+.what-we-do{
+  font-family: 'Cinzel', cursive;
+  text-align: center;
+  padding-top: 40px;
+  font-family: 'Fredericka the Great', cursive;
+  color: darkmagenta;
+}
+.what-we-do .headings{
+  padding-bottom: 38px;
+}
+#portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  margin-left:18%;
+  margin-right: 16%;
+}
+.col-md-3 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+h1{
+  text-align: center;
+}
+.portfolio h2{
+  text-align: center;
+  padding-top:40px;
+  font-family: 'Fredericka the Great', cursive;
+}
+.portfolio{
+  color: black;
+}
+.contact{
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  /* text-align: center; */
+}
+.title{
+  padding: 6px;
+}
+.contact h2{
+  text-align: center ;
+  margin-top: 30px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+font-family: 'Fredericka the Great', cursive;
+}
+input[type=text],input[type=email],#comment{
+  background: transparent;
+  color: deepskyblue;
+  font-size: 20px;
+  font-family:'Smokum'  , cursive;
+}
+.form-control::-webkit-input-placeholder {
+  color: white;
+}
+#MERGE1{
+  width: 30%;
+  margin-left: 18%;
+  margin-right: 30px;
+}
+#MERGE0{
+  width: 30%;
+}
+#comment{
+  margin-left: 20%;
+  width: 60%;
+}
+.btn{
+  margin-left: 20%;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+footer{
+  text-align: center;
+  padding-top: 30px;
+  font-family: 'Merienda', cursive;
+}
+footer p{
+  margin-top: 10px;
+}
+.toggle{
+    display: none;
+}
+#product, #development, #design{
+  display: none;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 16px;
+}
+#product .title, #development .title, #design .title{
+  font-size: 20px;
+  font-weight: 600;
+}
+#overlay,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7,#overlay8{
+  display: none;
+  color: skyblue;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(red, green, blue, alpha);
+  position:absolute;
+  top: 20px;
+  left: 35px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 50%;
+  font-family:'Cinzel' , serif;
+}
+@media only screen and (max-width: 755px){
+  #overlay,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7,#overlay8{
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: 16px;
+    padding-top: 20%;
+    /* font-size: 16px; */
+  }
+  .col-md-3 img{
+    width:100%px;
+    margin: 20px;
+  }
+  #portfolio{
+    margin-left:8%;
+    margin-right: 16%;
+    text-align: center;
+  }
+  button{
+    margin-left: 2%;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    /* margin-left: 10px; */
+    /* margin-right: -20%; */
+  }
+}
+@media only screen and (max-width: 425px){
+  #overlay,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7,#overlay8{
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: 16px;
+    padding-top: 20%;
+    font-size: 20px;
+  }
+  .col-md-3 img{
+    width:100%px;
+    margin: 20px;
+  }
+  #portfolio{
+    margin-left:8%;
+    margin-right: 16%;
+  }
+  button{
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+  #MERGE0{
+    width: 84%;
+    margin-left: 4%;
+    padding-bottom: 10px;
+  }
+  #MERGE1{
+    width: 100%;
+    margin-left: 4%;
+    margin-bottom: 20px;
+  }
+  #comment{
+    margin-left: 4%;
+    width: 84%;
+  }
+}
+@media only screen and (min-width: 825px){
+  #overlay,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7,#overlay8{
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: 20px;
+    padding-top:30%;
+  }
+  .col-md-3 img{
+    width: 400px;
+    margin: 20px;
+  }
+  #portfolio{
+    margin-left:10%;
+    margin-right: 10%;
+  }
+}
+@media only screen and (min-width: 625px){
+  #overlay,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7,#overlay8{
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: 20px;
+    padding-top:20%;
+    font-size: 26px;
+  }
+  .col-md-3 img{
+    width: 400px;
+    margin: 20px;
+  }
+  #portfolio{
+    margin-left:6%;
+    margin-right: 10%;
+  }
+}
+
+
+
+
+
+
+
+
 #services{
   padding-top: 30px;
 }
@@ -285,3 +772,4 @@ footer {
   background-color: DarkSalmon;
   color: white;
 }
+

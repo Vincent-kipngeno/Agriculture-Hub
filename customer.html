@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -25,7 +26,7 @@
           <p>Here you are going to find animal products given below: Eggs, beef, mutton, pork, wool.
           Click on the PLACE AN ORDER button below to get the form for ordering your products. Kindly enter
           the amount in the following form eggs: trays @30 eggs, beef,mutton, wool and pork: kilograms.</p>
-          <button type="button" class="showForm-farmers" name="button">SUGGEST SUPPLY</button>
+          <button type="button" class="showForm1-customers" name="button">PLACE ORDER</button>
           <form class="form form1-customers">
             <div class="form-group">
               <p>Choose the product:</p>
@@ -39,19 +40,135 @@
               </select>
               <div class="form-group">
                 <label for="quantity">Enter the quantity: </label>
-                <input type="number" name="quantity" class="form-control quantity" value="" required>
+                <input type="number" min="1" name="quantity" class="form-control quantity1" value="" required>
               </div>
-              <input type="submit" class="submit" name="submit" value="order">
-              <button type="button" class="another-order" name="button">PlACE ANOTHER ORDER</button>
-            </div>
-            <div >
-              <ul class="charge1-customers">
-
-              </ul>
+              <input type="submit" class="submit1" name="submit" value="order">
+              <button type="button" class="another-order another-order1" name="button">PlACE ANOTHER ORDER</button>
             </div>
           </form>
+          <div >
+            <ul class="charge1-customers">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+       <div class="col-md-4">
+         <h4>Fruits</h4>
+         <p>We offer a variety of fruits namely: Apples, Oranges, Grapes, Plums, Lemons and Peaches.</p>
+         <p>Go ahead and place your oder. Remember to enter the quantity of cartons.(A carton carries 200 fruits)</p>
+         <p>Grapes and Plams are sold per kg</p>
+         <button type="button" class="showForm3-customers" name="button">PLACE ORDER</button>
+         <form class="form form3-customers">
+          <div class="form-group">
+            <p>Select your fruits:</p>
+            <select class="form-control fruits" name="fruits" required>
+              <option value=""></option>
+              <option value="Apples">Apples @3000</option>
+              <option value="Oranges">Oranges @1000</option>
+              <option value="Grapes">Grapes @1000</option>
+              <option value="Plums">Plums @2000</option>
+              <option value="Lemons">Lemons @2300</option>
+              <option value="Peaches">Peaches @1500</option>
+            </select>
+            <div class="form-group">
+              <label for="quantity">Enter the quantity: </label>
+              <input type="number" min="1" name="quantity" class="form-control quantity3" value="" required>
+              <input type="submit" class="submit3" name="submit" value="order">
+              <button type="button" class="another-order another-order3" name="button">PlACE ANOTHER ORDER</button>
+            </div>
+          </div>
+         </form>
+         <div >
+          <ul class="charge3-customers">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="">
+        <button type="button" class="checkout-customers" name="button">CHECKOUT</button>
+        <br>
+        <div class="customer-summary">
+
         </div>
       </div>
     </div>
   </body>
   </html>
+
+
+
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous"/>
+        appears
+      <link rel="stylesheet" href="css/styles.css">
+      <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+      <title></title>
+    </head>
+    <body>
+      <div class="container">
+        <h1></h1>
+        <div class="row">
+          <div class="col-md-4 0ffset-md-1">
+            <h3>VEGETABLE PRODUCE</h3>
+            <p>
+              At our shop you'll be able to find vegetables that you desire to have.And as per now,the following products are the ones which are available:Kales,Cabbage,Lettuce,Cauliflower and Spinach.
+                Click on the button PLACE AN ORDER below to get the form for ordering your products. 
+                Kindly enter the amount in the specific places that you've been asked.
+              </p>
+  
+            <button type="button" class="showForm-farmers" name="button">SUGGEST SUPPLY</button>
+            <form class="form form1-customers">
+              <div class="form-group">
+                <p>Choose the produce needed</p>
+                <select class="form-control vegetable-produce" name="vegetable-produce" required>
+                  <option value="Kales">Kales @Ksh 2000</option>
+                  <option value="cabbage">Cabbage @Kshs 500</option>
+                  <option value="Lettuce">Lettuce @Kshs 1200</option>
+                  <option value="Spinach">Spinach@Kshs 200</option>
+                  <option value="Cauliflower">Cauliflower@Kshs 1500</option>
+                  <option value="Coriander">Coriander@Kshs 350</option>
+                </select>
+                <div class="form-group">
+                  <label for="quantity">Enter the quantity: </label>
+                  <input type="number" name="quantity" class="form-control quantity" value="" required>
+                </div>
+                <input type="submit" class="submit" name="submit" value="order">
+                <button type="button" class="another-order" name="button">PlACE ANOTHER ORDER</button>
+              </div>
+              <div >
+                <ul class="charge1-customers">
+  
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
