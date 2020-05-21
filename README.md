@@ -34,9 +34,9 @@ Incase you come across issues or you have any form of queries, ideas or concerns
 ### License
 Under the rules of MIT License
 Copyright (c) {2020} 
-- **{Vincent Kipngeno}** 
-- **{Maureen Chepkirui}** 
-- **{Ashley Mosoti}** 
-- **{Andrew Muchiri}** 
-- **{Ivine Kemuma}**
+- **Vincent Kipngeno** 
+- **Maureen Chepkirui** 
+- **Ashley Mosoti** 
+- **Andrew Muchiri** 
+- **Ivine Kemuma**
   
