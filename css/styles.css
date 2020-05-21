@@ -1,4 +1,4 @@
-.another-order, .form1-customers, .form1-farmers{
+.another-order, .form1-customers, .form1-farmers, .form3-customers, .form3-farmers{
   display: none;
 }
 #services{
@@ -137,3 +137,4 @@ color: white;
 background: #ff6600;
 color: white;
 }
+
