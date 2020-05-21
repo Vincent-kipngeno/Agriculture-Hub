@@ -137,3 +137,16 @@ color: white;
 background: #ff6600;
 color: white;
 }
+#intro{
+    background-image: url('../images/landing.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 230px;
+    height: 600px;
+    color: #white;
+    font-weight: bold;
+    font-size: 30px;
+  }
