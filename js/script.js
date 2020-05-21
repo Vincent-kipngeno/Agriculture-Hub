@@ -14,7 +14,7 @@ $(document).ready(function(){
   });
   event.preventDefault();
  });
- 
+
 
 
 
@@ -88,7 +88,7 @@ order.prototype.orderSummary = function () {
 
 function collector (categoryName){
   var type = $(".animal-products").val();
-  var amount = $(".quantity").val();
+  var amount = parseInt($(".quantity").val());
   newOrder = new order (type, amount);
   productsType = new category(categoryName);
   productsType.orders.push(newOrder);
@@ -132,7 +132,7 @@ $(document).ready(function(){
 });
 
 //...*fruits section...
-function category (name){
+/*function category (name){
   this.name = name;
   this.orders = [];
 }
@@ -246,4 +246,4 @@ $(document).ready(function(){
       $(".submit").show();
     });
   });
-});
+});*/
