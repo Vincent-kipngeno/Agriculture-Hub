@@ -174,8 +174,8 @@ $(document).ready(function(){
       $(".submit1").show();
     });
     $(".checkout-farmers").off("click").on("click",function(){
+      $(".farmer-summary").append(allCategories[1].name);
       allCategories.forEach(function(allCategory) {
-        $(".farmer-summary").append(allCategory.name);
           allCategory.orders.forEach(function(order){
           $(".farmer-summary").append(order.orderSummary());
         })
@@ -234,6 +234,15 @@ $(document).ready(function(){
       $(".fruits").val("");
       $(".quantity3").val("");
       $(".submit3").show();
+    });
+    $(".checkout-farmers").off("click").on("click",function(){
+      $(".farmer-summary").append(allCategories[1].name);
+      allCategories.forEach(function(allCategory) {
+          allCategory.orders.forEach(function(order){
+          $(".farmer-summary").append(order.orderSummary());
+        })
+      });
+      allCategories.splice(0, allCategories.length);
     });
   });
 });
