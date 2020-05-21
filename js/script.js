@@ -180,6 +180,33 @@ order.prototype.priceFarmers = function () {
     case "Coriander":
       productPrice = 350;
       break;
+    case "Black-beans":
+      productPrice = 1200;
+      break;
+    case "Soy-beans":
+      productPrice = 1500;
+      break;
+    case "Peas":
+      productPrice = 1000;
+      break;
+    case "Peanuts":
+      productPrice = 1800;
+      break;
+    case "Yellow-beans":
+      productPrice = 1000;
+      break;
+    case "French-beans":
+      productPrice = 800;
+      break;
+    case "Chick-peas":
+      productPrice = 1500;
+      break;
+    case "Lentils":
+      productPrice = 1000;
+      break;
+    case "Lima-beans":
+      productPrice = 1400;
+      break;
     default:
       productPrice = 0;
   }
@@ -395,38 +422,70 @@ $(document).ready(function(){
     });
   });
 });
-/*var allCategories = [];
+
+
+//Legumes
+function collectorLegumes (categoryName){
+  var type = $(".legumes").val();
+  var amount = parseInt($(".quantity4").val());
+  newOrder = new order (type, amount);
+  productsType = new category(categoryName);
+  productsType.orders.push(newOrder);
+  allCategories.push(productsType);
+};
+
+var allCategories = [];
 $(document).ready(function(){
-  $(".showForm7-customers").click(function(){
-    $(".form7-customers").toggle();
+  $(".showForm1-customers").click(function(){
+    $(".form1-customers").toggle();
   });
-  $(".form7-customers").submit(function(event){
+  $(".form1-customers").submit(function(event){
     event.preventDefault();
-    var categoryName = "Vegetable Products: ";
-    collectorVegetables(categoryName);
-    $(".charge7-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.price() + "</li>");
-    $(".another-order").show();
-    $(".submit").hide();
-    $(".another-order").off("click").on("click",function(){
-      $(".vegetable-products").val("");
-      $(".quantity").val("");
-      $(".submit").show();
-    });
-  });
-  $(".showForm7-farmers").click(function(){
-    $(".form7-farmers").toggle();
-  });
-  $(".form7-farmers").submit(function(event){
-    event.preventDefault();
-    var categoryName = "Vegetable Products: ";
-    collector(categoryName);
-    $(".charge7-farmers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceFarmers() + "</li>");
-    $(".another-order").show();
-    $(".submit").hide();
-    $(".another-order").off("click").on("click",function(){
+    var categoryName = "Animal Products: ";
+
+    collectorAnimals(categoryName);
+    $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
+    $(".another-order1").show();
+    $(".submit1").hide();
+    $(".another-order1").click(function(){
       $(".animal-products").val("");
-      $(".quantity").val("");
-      $(".submit").show();
+      $(".quantity1").val("");
+      $(".submit1").show();
+    });
+    $(".checkout-customers").off("click").on("click",function(){
+      allCategories.forEach(function(allCategory) {
+        $(".customer-summary").append(allCategory.name);
+          allCategory.orders.forEach(function(order){
+          $(".customer-summary").append(order.orderSummaryCustomers());
+        })
+      });
+      allCategories.splice(0, allCategories.length);
     });
   });
-});*/
+  $(".showForm1-farmers").click(function(){
+    $(".form1-farmers").toggle();
+  });
+  $(".form1-farmers").submit(function(event){
+    event.preventDefault();
+    var categoryName = "Animal Products: ";
+    collectorAnimals(categoryName);
+    $(".charge1-farmers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceFarmers() + "</li>");
+    $(".another-order1").show();
+    $(".submit1").hide();
+    $(".another-order1").off("click").on("click",function(){
+      $(".animal-products").val("");
+      $(".quantity1").val("");
+      $(".submit1").show();
+    });
+    $(".checkout-farmers").off("click").on("click",function(){
+      allCategories.forEach(function(allCategory) {
+        $(".farmer-summary").append(allCategory.name);
+          allCategory.orders.forEach(function(order){
+          $(".farmer-summary").append(order.orderSummaryFamers());
+        })
+      });
+      allCategories.splice(0, allCategories.length);
+      categoryName = "";
+    });
+  });
+});
