@@ -40,13 +40,31 @@ order.prototype.priceCustomers = function () {
       productPrice = 300;
       break;
     case "Mutton":
-      productPrice = 350;
+     productPrice = 350;
+     break;
+   case "Pork":
+     productPrice = 400;
+     break;
+   case "Wool":
+     productPrice = 200;
+     break;
+    case "Apples":
+      productPrice = 3000;
       break;
-    case "Pork":
-      productPrice = 400;
+    case "Oranges":
+      productPrice = 1000;
       break;
-    case "Wool":
-      productPrice = 200;
+    case "Grapes":
+      productPrice = 1000;
+      break;
+    case "Plums":
+      productPrice = 2000;
+      break;
+    case "Lemons":
+      productPrice = 2300;
+      break;
+    case "Peach":
+      productPrice = 1500;
       break;
     default:
       productPrice = 0;
@@ -150,51 +168,6 @@ $(document).ready(function(){
 });
 
 //...*fruits section...
-order.prototype.priceCustomers = function () {
-  var productPrice;
-  switch (this.type) {
-    case "Apples":
-      productPrice = 3000;
-      break;
-    case "Oranges":
-      productPrice = 1000;
-      break;
-    case "Grapes":
-      productPrice = 1000;
-      break;
-    case "Plums":
-      productPrice = 2000;
-      break;
-    case "Lemons":
-      productPrice = 2300;
-      break;
-    case "Peach":
-      productPrice = 1500;
-      break;
-    default:
-      productPrice = 0;
-  }
-  totalCharge = productPrice * this.quantity;
-  return totalCharge;
-};
-order.prototype.priceFarmers = function () {
-  var productPrice;
-  switch (this.type) {
-
-    default:
-      productPrice = 0;
-  }
-  totalCharge = productPrice * this.quantity;
-  return totalCharge;
-};
-order.prototype.orderSummary = function () {
-  return ("<ul>"+
-          "<li> Type: "+ this.type +
-          "<li> Quantity: "+ this.quantity +
-           "<li> charge: "+ this.price() +
-         +"</ul>");
-};
-
 function collector (categoryName){
   var type = $(".fruits").val();
   var amount = $(".quantity").val();
