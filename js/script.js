@@ -75,7 +75,7 @@ order.prototype.priceCustomers = function () {
 order.prototype.priceFarmers = function () {
   var productPrice;
   switch (this.type) {
-    case "Eggs":
+    /*case "Eggs":
       productPrice = 300;
       break;
     case "Beef":
@@ -89,7 +89,7 @@ order.prototype.priceFarmers = function () {
       break;
     case "Wool":
       productPrice = 100;
-      break;
+      break;*/
     case "Apples":
       productPrice = 3000;
       break;
@@ -122,7 +122,7 @@ order.prototype.orderSummary = function () {
          +"</ul>");
 };
 
-function collector (categoryName){
+function collectorAnimals (categoryName){
   var type = $(".animal-products").val();
   var amount = parseInt($(".quantity").val());
   newOrder = new order (type, amount);
@@ -139,7 +139,7 @@ $(document).ready(function(){
   $(".form1-customers").submit(function(event){
     event.preventDefault();
     var categoryName = "Animal Products: ";
-    collector(categoryName);
+    collectorAnimals(categoryName);
     $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
     $(".another-order").show();
     $(".submit").hide();
@@ -155,7 +155,7 @@ $(document).ready(function(){
   $(".form1-farmers").submit(function(event){
     event.preventDefault();
     var categoryName = "Animal Products: ";
-    collector(categoryName);
+    collectorAnimals(categoryName);
     $(".charge1-farmers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceFarmers() + "</li>");
     $(".another-order").show();
     $(".submit").hide();
@@ -168,16 +168,14 @@ $(document).ready(function(){
 });
 
 //...*fruits section...
-function collector (categoryName){
+function collectorFruits (categoryName){
   var type = $(".fruits").val();
-  var amount = $(".quantity").val();
+  var amount = parseInt($(".quantity3").val());
   newOrder = new order (type, amount);
   productsType = new category(categoryName);
   productsType.orders.push(newOrder);
   allCategories.push(productsType);
 };
-
-var allCategories = [];
 $(document).ready(function(){
   $(".showForm3-customers").click(function(){
     $(".form3-customers").toggle();
@@ -185,13 +183,13 @@ $(document).ready(function(){
   $(".form3-customers").submit(function(event){
     event.preventDefault();
     var categoryName = "Fruits: ";
-    collector(categoryName);
-    $(".charge3-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.price() + "</li>");
+    collectorFruits(categoryName);
+    $(".charge3-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
     $(".another-order").show();
     $(".submit").hide();
     $(".another-order").off("click").on("click",function(){
       $(".fruits").val("");
-      $(".quantity").val("");
+      $(".quantity3").val("");
       $(".submit").show();
     });
   });
@@ -201,13 +199,13 @@ $(document).ready(function(){
   $(".form3-farmers").submit(function(event){
     event.preventDefault();
     var categoryName = "Fruits: ";
-    collector(categoryName);
-    $(".charge3-farmers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceFarmers() + "</li>");
+    collectorFruits(categoryName);
+    $(".charge3-farmers").append("<li>" + newOrder.type + ": Kshs" +  newOrder.priceCustomers() + "</li>");
     $(".another-order").show();
     $(".submit").hide();
     $(".another-order").off("click").on("click",function(){
       $(".fruits").val("");
-      $(".quantity").val("");
+      $(".quantity3").val("");
       $(".submit").show();
     });
   });
