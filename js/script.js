@@ -84,7 +84,7 @@ order.prototype.priceCustomers = function () {
     case "Spinach":
       productPrice = 1200;
       break;
-      case "Lettuce":
+    case "Lettuce":
       productPrice = 1200;
       break;
     case "Cauliflower":
@@ -92,6 +92,33 @@ order.prototype.priceCustomers = function () {
       break;
     case "coriander":
       productPrice = 350;
+      break;
+    case "Black-beans":
+      productPrice = 1900;
+      break;
+    case "Soy-beans":
+      productPrice = 2000;
+      break;
+    case "Peas":
+      productPrice = 2000;
+      break;
+    case "Peanuts":
+      productPrice = 2400;
+      break;
+    case "Yellow-beans":
+      productPrice = 1800;
+      break;
+    case "French-beans":
+      productPrice = 1000;
+      break;
+    case "Chick-peas":
+      productPrice = 2200;
+      break;
+    case "Lentils":
+      productPrice = 1500;
+      break;
+    case "Lima-beans":
+      productPrice = 2000;
       break;
     default:
       productPrice = 0;
@@ -283,7 +310,7 @@ $(document).ready(function(){
   $(".form3-farmers").submit(function(event){
     event.preventDefault();
     var categoryName = "Fruits: ";
-    
+
     collectorFruits(categoryName);
     $(".charge3-farmers").append("<li>" + newOrder.type + ": Kshs" +  newOrder.priceCustomers() + "</li>");
     $(".another-order3").show();
