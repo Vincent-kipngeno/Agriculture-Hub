@@ -1,11 +1,11 @@
 # Agriculture Hub
 #### An application that farmers use to sell their farm products to wholesalers that provides them wit agricultural extension services. 
 #### Authors
-*Vincent Kipngeno*
-*Ashley Mosoti*
-*Maureen Chepkirui*
-*Andrew Muchiri*
-*Ivine Kemuma*
+- *Vincent Kipngeno*
+- *Ashley Mosoti*
+- *Maureen Chepkirui*
+- *Andrew Muchiri*
+- *Ivine Kemuma*
 ## Description
 This is an application that provides farmers with a platform to showcase their farm products and get buyers. With this application both farmers and customers can sell their goods. Customers have their goods delivered to wherever they are situated at ease.
 ## Setup/Installation Requirements
@@ -33,5 +33,10 @@ To help fix a bug or improve an existing module, go ahead and:
 Incase you come across issues or you have any form of queries, ideas or concerns please feel free to contact us at agrihubsmart2020@gmail.com . Remember your contribution is highly valued.
 ### License
 Under the rules of MIT License
-Copyright (c) {2020} **{Vincent Kipngeno}** **{Maureen Chepkirui}** **{Ashley Mosoti}** **{Andrew Muchiri}** **{Ivine Kemuma}**
+Copyright (c) {2020} 
+- **{Vincent Kipngeno}** 
+- **{Maureen Chepkirui}** 
+- **{Ashley Mosoti}** 
+- **{Andrew Muchiri}** 
+- **{Ivine Kemuma}**
   
