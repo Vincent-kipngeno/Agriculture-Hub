@@ -1,4 +1,7 @@
-
+h1, h2, h3, h4{
+    color: greenyellow;
+    font-weight: bolder;
+}
 body{
     background-image: url(./image/image.bg.jfif);
     background-size: cover;
@@ -22,4 +25,5 @@ body{
     padding: 15px;
     color: black;
     height: 100px;
+    text-align: center;
   }
