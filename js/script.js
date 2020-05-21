@@ -1,8 +1,31 @@
+
+$(document).ready(function(){
+   $("button#final-order").click(function(event){
+     event.preventDefault();
+     let person = $("input#name").val();
+     let phone = $("input#phone").val();
+     let email = $("input#email").val();
+       if ($("input#name").val() && $("input#phone").val() && $("input#email").val()!=""){
+         alert(person+", We have recieved your request.One of our officers will get back to you in a few.Thank you");
+       }
+         else {
+      alert("Please fill in the details!!!");
+    }
+  });
+  event.preventDefault();
+ });
+ 
+
+
+
+
+
+
+
 function category (name){
   this.name = name;
   this.orders = [];
 }
-
 function order (type, quantity){
   this.type = type;
   this.quantity = quantity;
@@ -81,7 +104,7 @@ $(document).ready(function(){
     event.preventDefault();
     var categoryName = "Animal Products: ";
     collector(categoryName);
-    $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.price() + "</li>");
+    $(".charge1-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
     $(".another-order").show();
     $(".submit").hide();
     $(".another-order").off("click").on("click",function(){
