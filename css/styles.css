@@ -1,4 +1,4 @@
-.another-order, .form1-customers, .form1-farmers, .form3-customers, .form3-farmers{
+.another-order, .form{
   display: none;
 }
 
@@ -772,4 +772,3 @@ footer {
   background-color: DarkSalmon;
   color: white;
 }
-
