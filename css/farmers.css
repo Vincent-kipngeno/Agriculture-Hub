@@ -1,3 +1,10 @@
+
+body{
+    background-image: url(./image/image.bg.jfif);
+    background-size: cover;
+    font-size: large;
+    font-weight: bold;
+}
 .another-order, .form1-customers, .form1-farmers{
     display: none;
   }
@@ -7,11 +14,12 @@
   .another-order, .form2-customers, .form2-farmers{
       display: none;
   }
-  .another-order, 
+  .another-order, .form4-customers, .form4-farmers{
+      display: none;
+  }
 .first {
-    text-align: center;
     font-family: 'Frijole', cursive;
-    padding: 25px;
+    padding: 15px;
     color: black;
-    height: 150px;
+    height: 100px;
   }
