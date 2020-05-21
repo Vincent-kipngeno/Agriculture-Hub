@@ -20,7 +20,7 @@
     <div class="container">
       <h1>WELCOME</h1>
       <div class="row">
-        <div class="col-md-4 0ffset-md-1">
+        <div class="col-md-4 0ffset-2">
           <h3>ANIMAL PRODUCTS</h3>
           <p>Here you are going to find animal products given below: Eggs, beef, mutton, pork, wool.
           Click on the SUGGEST SUPPLY button below to get the form for supplying your products. Kindly enter
@@ -39,10 +39,10 @@
               </select>
               <div class="form-group">
                 <label for="quantity">Enter the quantity: </label>
-                <input type="number" name="quantity" min="1" class="form-control quantity" value="" required>
+                <input type="number" name="quantity" min="1" class="form-control quantity1" value="" required>
               </div>
-              <input type="submit" class="submit" name="submit" value="SUPPLY">
-              <button type="button" class="another-order" name="button">PlACE ANOTHER SUPPLY</button>
+              <input type="submit" class="submit1" name="submit" value="SUPPLY">
+              <button type="button" class="another-order another-order1" name="button">PlACE ANOTHER SUPPLY</button>
             </div>
           </form>
           <div >
@@ -51,7 +51,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-4 offset-1">
+        <div class="col-md-4 offset-2">
           <!--Legumes module by Andrew the man the hero-->
           <h3>LEGUMES</h3>
           <p>Here you'll find a variety of legumes given below:Kidney beans, Black beans, Soy beans, Peas, Peanuts, Yellow beans, French beans, Chick peas, Lentils and Lima beans.
@@ -74,10 +74,10 @@
                 </select>
                 <div class="form-group">
                   <label for="quantity">Enter the quantity: </label>
-                  <input type="number" name="quantity" class="form-control quantity" value="" required>
+                  <input type="number" name="quantity" class="form-control quantity4" value="" required>
                 </div>
-                <input type="submit" class="submit" name="submit" value="order">
-                <button type="button" class="another-order" name="button">PlACE ANOTHER ORDER</button>
+                <input type="submit" class="submit4" name="submit" value="order">
+                <button type="button" class="another-order another-order4" name="button">PlACE ANOTHER ORDER</button>
               </div>
               <div >
                 <ul class="charge4-farmers">
@@ -88,32 +88,41 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <title></title>
-  </head>
-  <body>
     <div class="container">
-      <h1></h1>
       <div class="row">
-        <div class="col-md-4 0ffset-md-1">
+        <div class="col-md-4">
+         <h4>Fruits</h4>
+         <p>We offer a variety of fruits namely: Apples, Oranges, Grapes, Plums, Lemons and Peaches.</p>
+         <p>Go ahead and place your oder. Remember to enter the quantity of cartons.(A carton carries 200 fruits)</p>
+         <p>Grapes and Plams are sold per kg</p>
+         <button type="button" class="showForm3-farmers" name="button">SUGGEST SUPPLY</button>
+         <form class="form form3-farmers">
+          <div class="form-group">
+            <p>Select your fruits:</p>
+            <select class="form-control fruits" name="fruits" required>
+              <option value=""></option>
+              <option value="Apples">Apples @3000</option>
+              <option value="Oranges">Oranges @1000</option>
+              <option value="Grapes">Grapes @1000</option>
+              <option value="Plums">Plums @2000</option>
+              <option value="Lemons">Lemons @2300</option>
+              <option value="Peaches">Peaches @1500</option>
+            </select>
+            <div class="form-group">
+              <label for="quantity">Enter the quantity: </label>
+              <input type="number" min="1" name="quantity" class="form-control quantity3" value="" required>
+              <input type="submit" class="submit3" name="submit" value="supply">
+              <button type="button" class="another-order another-order3" name="button">PlACE ANOTHER SUPPLY</button>
+            </div>
+          </div>
+         </form>
+         <div >
+          <ul class="charge3-farmers">
+
+          </ul>
+        </div>
+      </div>
+           <div class="col-md-4 0ffset-md-1">
        
            <!--Vegetables module by Ivine-->
            <h3>VEGETABLES</h3>
@@ -152,19 +161,17 @@
             </ul>
           </div>
         </div>
+    </div>
+    <div class="container">
+      <div class="">
+        <button type="button" class="checkout-farmers" name="button">CHECKOUT</button>
+        <div class="farmer-summary">
+
+        </div>
       </div>
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 
 
