@@ -633,7 +633,7 @@ color: white;
     text-transform: uppercase;
     padding-top: 230px;
     height: 600px;
-    color: #black;
+    color: black;
     font-weight: bold;
 
   }
@@ -765,6 +765,7 @@ span.psw {
   }
 .container{
   background-color: green;
+
 }
 footer {
   text-align: center;
