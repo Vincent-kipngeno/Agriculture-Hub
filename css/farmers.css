@@ -9,7 +9,7 @@ h3, h4{
     font-family: 'Fruktur', cursive;
 }
 body{
-    background-image: url(./image/image.bg.jfif);
+    background-image: url(./image/image.bg.jfif) no-repeat;
     background-size: cover;
     font-size: larger;
     font-weight: bold;
