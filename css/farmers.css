@@ -1,7 +1,7 @@
 h1, h2{
     text-align: center;
     font-family: 'Monoton', cursive;
-    color: black;
+    color: purple;
 }
 h3, h4{
     color: greenyellow;
@@ -9,12 +9,15 @@ h3, h4{
     font-family: 'Fruktur', cursive;
 }
 body{
-    background-image: url(./image/image.bg.jfif) no-repeat;
+    background: url("image/lettuce.jpg") rgba(0, 0, 0, 0.5) ;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     font-size: larger;
     font-weight: bold;
     font-family: 'Love Ya Like A Sister', cursive;
-    color: black;
+    color: white;
+    background-blend-mode: multiply;
 }
 .another-order, .form1-customers, .form1-farmers{
     display: none;
