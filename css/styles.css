@@ -773,3 +773,7 @@ footer {
   background-color: DarkSalmon;
   color: white;
 }
+/* extension */
+.extension {
+  opacity: 0.6;
+}
