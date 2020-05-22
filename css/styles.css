@@ -42,13 +42,6 @@ h6 {
 .footer p {
     font-family: "Fredericka the Great", cursive;
 }
-.col-md-12 {
-    width: 100%;
-    color: #fff;
-    font-family: 'Fredericka the Great', cursive;
-    font-size: calc(1vw + 1vh + .5vmin);
-    font-size: 1.1em;
-}
 h1 {
     font-family: 'Fredericka the great', cursive;
 }
@@ -485,7 +478,6 @@ footer p{
 
 
 
-
 #services{
   padding-top: 30px;
 }
@@ -662,7 +654,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  text-align: center;
 }
 
 button:hover {
