@@ -17,7 +17,7 @@ body{
     font-weight: bold;
     font-family: 'Love Ya Like A Sister', cursive;
 }
-.animals{
+.products{
   text-align: center;
 }
 .animal, .legume, .fruit, .vegetable, .detail{
@@ -40,10 +40,39 @@ body{
   .another-order, .form4-customers, .form4-farmers{
       display: none;
   }
+  /*table{
+    border-spacing: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }*/
+  table{
+    background: rgba(255, 255, 255, 0.5);
+    background-position: center;
+    background-size: cover;
+    color: ;
+    background-blend-mode: multiply;
+  }
+  table, tr, td, th {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  th{
+    font-size: 20px;
+  }
+  td, tr {
+    font-size: 15px;
+    font-family: fantasy;
+  }
 .first {
     font-family: 'hunters script';
     padding: 15px;
     color: black;
     height: 100px;
     text-align: center;
+  }
+  @media only screen and (min-width: 768px){
+    .animal, .legume, .fruit, .vegetable, .detail{
+      margin-left: 10%;
+    }
   }
