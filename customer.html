@@ -21,12 +21,6 @@
     <title></title>
   </head>
   <style>
-body {
-  background-image: url('images/pexel.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-}
 p{
   font-weight: bold;
   font-size: 20px;
@@ -37,7 +31,7 @@ p{
       <h1>WELCOME</h1>
       <h2>BRINGING PRODUCTS TO YOU</h2>
       <div class="row">
-        <div class="col-md-4 0ffset-1">
+        <div class="col-md-4 0ffset-1 animal">
           <h3>ANIMAL PRODUCTS</h3>
           <p>Here you are going to find animal products given below: Eggs, beef, mutton, pork, wool.
           Click on the PLACE AN ORDER button below to get the form for ordering your products. Kindly enter
@@ -68,7 +62,7 @@ p{
             </ul>
           </div>
         </div>
-        <div class="col-md-4 offset-2">
+        <div class="col-md-4 offset-2 legume">
           <!--Legumes module by Andrew the man the hero-->
           <h3>LEGUMES</h3>
           <p>Here you'll find a variety of legumes given below:Kidney beans, Black beans, Soy beans, Peas, Peanuts, Yellow beans, French beans, Chick peas, Lentils and Lima beans.
@@ -111,13 +105,14 @@ p{
     <!--Fruits modules by Miss Ashley-->
     <div class="container">
       <div class="row">
-       <div class="col-md-4 offset-1 style= 'margin-left: 5%;'">
+        <div class="col-md-4 0ffset-2 fruit">
+         <!--Fruits module by Miss Ashley-->
          <h4>FRUITS</h4>
          <p>We offer a variety of fruits namely: Apples, Oranges, Grapes, Plums, Lemons and Peaches.</p>
          <p>Go ahead and place your oder. Remember to enter the quantity of cartons.(A carton carries 200 fruits)</p>
          <p>Grapes and Plams are sold per kg</p>
-         <button type="button" class="showForm3-customers" name="button">PLACE ORDER</button>
-         <form class="form form3-customers">
+         <button type="button" class="showForm3-farmers" name="button">SUGGEST SUPPLY</button>
+         <form class="form form3-farmers">
           <div class="form-group">
             <p>Select your fruits:</p>
             <select class="form-control fruits" name="fruits" required>
@@ -132,50 +127,54 @@ p{
             <div class="form-group">
               <label for="quantity">Enter the quantity: </label>
               <input type="number" min="1" name="quantity" class="form-control quantity3" value="" required>
-              <input type="submit" class="submit3" name="submit" value="order">
-              <button type="button" class="another-order another-order3" name="button">PlACE ANOTHER ORDER</button>
             </div>
+            <input type="submit" class="submit3" name="submit" value="SUPPLY">
+            <button type="button" class="another-order another-order3" name="button">PlACE ANOTHER SUPPLY</button>
           </div>
          </form>
          <div >
-          <ul class="charge3-customers">
+          <ul class="charge3-farmers">
 
           </ul>
         </div>
       </div>
-      <div class="col-md-4 0ffset-2">
-        <h3>VEGETABLES</h3>
-        <p>
-          At our shop you'll be able to find vegetables that you desire to have.And as per now,the following products are the ones which are available:Kales,Cabbage,Lettuce,Cauliflower and Spinach.
-            Click on the button PLACE AN ORDER below to get the form for ordering your products.
-            Kindly enter the amount in the specific places that you've been asked.
-          </p>
-        <button type="button" class="showForm2-customers" name="button">PLACE ORDER</button>
-        <form class="form form2-customers">
-          <div class="form-group">
-            <p>Choose the produce needed</p>
-            <select class="form-control vegetables" name="vegetable-produce" required>
-              <option value="Kales">Kales @Ksh 2000</option>
-              <option value="cabbage">Cabbage @Kshs 1500</option>
-              <option value="Lettuce">Lettuce @Kshs 1200</option>
-              <option value="Spinach">Spinach@Kshs 1200</option>
-              <option value="Cauliflower">Cauliflower@Kshs 1500</option>
-              <option value="coriander">Coriander@Kshs 350</option>
-            </select>
-            <div class="form-group">
-              <label for="quantity">Enter the quantity: </label>
-              <input type="number" name="quantity" class="form-control quantity2" value="" required>
-            </div>
-            <input type="submit" class="submit2" name="submit" value="order">
-            <button type="button" class="another-order another-order2" name="button">PlACE ANOTHER ORDER</button>
-          </div>
-          <div >
-            <ul class="charge2-customers">
+           <div class="col-md-4 offset-2 vegetable">
+           <div class="container"></div>
+           <!--Vegetables module by Ivine-->
+           <h3>VEGETABLES</h3>
+           <p>At our shop you'll be able to find vegetables that you desire to have.And as per now,the following products are the ones which are available:Kales,Cabbage,Lettuce,Cauliflower and Spinach.
+             Click on the button PLACE AN ORDER below to get the form for ordering your products.
+             Kindly enter the amount in the specific places that you've been asked.</p>
+             <button type="button" class="showForm2-farmers" name="button">SUGGEST SUPPLY</button>
+             <form class="form form2-farmers">
+               <div class="form-group">
+                 <p>Choose the product:</p>
+                 <select class="form-control vegetables" name="vegetables" required>
+                   <option value=""></option>
+                   <option value="Kales">Kales @Ksh 2000</option>
+                   <option value="Cabbage">Cabbage @Ksh 1500</option>
+                   <option value="Spinach">Spinach @Ksh 1200</option>
+                   <option value="Lettuce">Lettuce @Ksh 2000</option>
+                   <option value="Cauliflower">Cauliflower @Ksh 1500</option>
+                   <option value="Coriander">Coriander @Ksh 350</option>
 
-            </ul>
+                 </select>
+                 <div class="form-group">
+                   <label for="quantity">Enter the quantity: </label>
+                   <input type="number" name="quantity" class="form-control quantity2" value="" required>
+                 </div>
+                 <input type="submit" class="submit2" name="submit" value="SUPPLY">
+                 <button type="button" class="another-order another-order2" name="button">PlACE ANOTHER ORDER</button>
+               </div>
+               <div >
+                 <ul class="charge2-customers">
+
+
+                 </ul>
+               </div>
+             </form>
+           </div>
           </div>
-        </form>
-      </div>
     </div>
     <br><br><br>
     <div class="container">
@@ -184,7 +183,7 @@ p{
         <button type="button" class="checkout-customers" name="button">CHECKOUT</button>
         </div>
         <br>
-        <div class="customer-summary">
+        <div class="customer-summary detail">
 
         </div>
       </div>

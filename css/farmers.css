@@ -9,15 +9,24 @@ h3, h4{
     font-family: 'Fruktur', cursive;
 }
 body{
-    background: url("image/lettuce.jpg") rgba(0, 0, 0, 0.5) ;
+    background: url("image/lettuce.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     font-size: larger;
     font-weight: bold;
     font-family: 'Love Ya Like A Sister', cursive;
-    color: white;
-    background-blend-mode: multiply;
+}
+.animals{
+  text-align: center;
+}
+.animal, .legume, .fruit, .vegetable, .detail{
+  background: rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  background-blend-mode: multiply;
+  margin-bottom: 20px;
 }
 .another-order, .form1-customers, .form1-farmers{
     display: none;
