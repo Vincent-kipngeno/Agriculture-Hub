@@ -35,7 +35,8 @@ function category (name){
   this.name = name;
   this.orders = [];
 }
-function order (type, quantity){
+function order (type, quantity, categori){
+  this.categori = categori;
   this.type = type;
   this.quantity = quantity;
 }
@@ -78,7 +79,7 @@ order.prototype.priceCustomers = function () {
     case "Kales":
       productPrice = 2000;
       break;
-    case "cabbage":
+    case "Cabbage":
       productPrice = 1500;
       break;
     case "Spinach":
@@ -214,25 +215,27 @@ order.prototype.priceFarmers = function () {
   return totalCharge;
 };
 order.prototype.orderSummaryCustomers = function () {
-  return ("<ul class = 'prizes'>"+
-          "<li> Type: "+ this.type + "</li>"+
-          "<li> Quantity: "+ this.quantity +"</li>"+
-           "<li> charge: Kshs" + "<span class = 'prize'>" + this.priceCustomers()+ "</span>" +"</li>"+
-         "</ul>");
+  return ("<tr>"+
+          "<td>"+ this.categori + "</td>"+
+          "<td>"+ this.type + "</td>"+
+          "<td>"+ this.quantity +"</td>"+
+           "<td>Kshs " + this.priceCustomers() +"</td>"+
+         "</tr>");
 };
 order.prototype.orderSummaryFamers = function () {
-  return ("<ul class = 'pricees'>"+
-          "<li> Type: "+ this.type + "</li>"+
-          "<li> Quantity: "+ this.quantity +"</li>"+
-           "<li> charge: Kshs" + "<span class = 'pricee'>" + this.priceFarmers()+"</span>" + "</li>"+
-         "</ul>");
+  return ("<tr>"+
+          "<td>"+ this.categori + "</td>"+
+          "<td>"+ this.type + "</td>"+
+          "<td>"+ this.quantity +"</td>"+
+           "<td>Kshs " + this.priceFarmers() + "</td>"+
+         "</tr>");
 };
 
 
 function collectorAnimals (categoryName){
   var type = $(".animal-products").val();
   var amount = parseInt($(".quantity1").val());
-  newOrder = new order (type, amount);
+  newOrder = new order (type, amount, categoryName);
   productsType = new category(categoryName);
   productsType.orders.push(newOrder);
   allCategories.push(productsType);
@@ -258,7 +261,7 @@ $(document).ready(function(){
     });
     $(".checkout-customers").off("click").on("click",function(){
       allCategories.forEach(function(allCategory) {
-        $(".customer-summary").append(allCategory.name);
+        //$(".customer-summary-animal").append(allCategory.name);
           allCategory.orders.forEach(function(order){
           $(".customer-summary").append(order.orderSummaryCustomers());
         })
@@ -283,7 +286,7 @@ $(document).ready(function(){
     });
     $(".checkout-farmers").off("click").on("click",function(){
       allCategories.forEach(function(allCategory) {
-        $(".farmer-summary").append(allCategory.name);
+        //$(".farmer-summary-animal").append(allCategory.name);
           allCategory.orders.forEach(function(order){
           $(".farmer-summary").append(order.orderSummaryFamers());
         })
@@ -299,7 +302,7 @@ $(document).ready(function(){
 function collectorFruits (categoryName){
   var type = $(".fruits").val();
   var amount = parseInt($(".quantity3").val());
-  newOrder = new order (type, amount);
+  newOrder = new order (type, amount, categoryName);
   productsType = new category(categoryName);
   productsType.orders.push(newOrder);
   allCategories.push(productsType);
@@ -322,7 +325,7 @@ $(document).ready(function(){
     });
     $(".checkout-customers").off("click").on("click",function(){
       allCategories.forEach(function(allCategory) {
-        $(".customer-summary").append(allCategory.name);
+        //$(".customer-summary-fruit").append(allCategory.name);
           allCategory.orders.forEach(function(order){
           $(".customer-summary").append(order.orderSummaryCustomers());
         })
@@ -339,7 +342,7 @@ $(document).ready(function(){
     var categoryName = "Fruits: ";
 
     collectorFruits(categoryName);
-    $(".charge3-farmers").append("<li>" + newOrder.type + ": Kshs" +  newOrder.priceCustomers() + "</li>");
+    $(".charge3-farmers").append("<li>" + newOrder.type + ": Kshs" +  newOrder.priceFarmers() + "</li>");
     $(".another-order3").show();
     $(".submit3").hide();
     $(".another-order3").off("click").on("click",function(){
@@ -349,7 +352,7 @@ $(document).ready(function(){
     });
     $(".checkout-farmers").off("click").on("click",function(){
       allCategories.forEach(function(allCategory) {
-        $(".farmer-summary").append(allCategory.name);
+        //$(".farmer-summary-fruit").append(allCategory.name);
           allCategory.orders.forEach(function(order){
           $(".farmer-summary").append(order.orderSummaryFamers());
         })
@@ -363,7 +366,7 @@ $(document).ready(function(){
 function collectorVegetables (categoryName){
   var type = $(".vegetables").val();
   var amount = parseInt($(".quantity2").val());
-  newOrder = new order (type, amount);
+  newOrder = new order (type, amount, categoryName);
   productsType = new category(categoryName);
   productsType.orders.push(newOrder);
   allCategories.push(productsType);
@@ -377,18 +380,19 @@ $(document).ready(function(){
   $(".form2-customers").submit(function(event){
     event.preventDefault();
     var categoryName = "Vegetables: ";
-    collectorVegetables(categoryName);
+
+    collectorAnimals(categoryName);
     $(".charge2-customers").append("<li>" + newOrder.type + ": Kshs" + newOrder.priceCustomers() + "</li>");
     $(".another-order2").show();
     $(".submit2").hide();
-    $(".another-order2").off("click").on("click",function(){
-      $(".vegetables").val("");
+    $(".another-order2").click(function(){
+      $(".vehetables").val("");
       $(".quantity2").val("");
       $(".submit2").show();
     });
     $(".checkout-customers").off("click").on("click",function(){
       allCategories.forEach(function(allCategory) {
-        $(".customer-summary").append(allCategory.name);
+        //$(".customer-summary-animal").append(allCategory.name);
           allCategory.orders.forEach(function(order){
           $(".customer-summary").append(order.orderSummaryCustomers());
         })
@@ -413,7 +417,7 @@ $(document).ready(function(){
     });
     $(".checkout-farmers").off("click").on("click",function(){
       allCategories.forEach(function(allCategory) {
-        $(".farmer-summary").append(allCategory.name);
+        //$(".farmer-summary-vegetable").append(allCategory.name);
           allCategory.orders.forEach(function(order){
           $(".farmer-summary").append(order.orderSummaryFamers());
         })
@@ -428,7 +432,7 @@ $(document).ready(function(){
 function collectorLegumes (categoryName){
   var type = $(".legumes").val();
   var amount = parseInt($(".quantity4").val());
-  newOrder = new order (type, amount);
+  newOrder = new order (type, amount, categoryName);
   productsType = new category(categoryName);
   productsType.orders.push(newOrder);
   allCategories.push(productsType);
@@ -454,7 +458,7 @@ $(document).ready(function(){
     });
     $(".checkout-customers").off("click").on("click",function(){
       allCategories.forEach(function(allCategory) {
-        $(".customer-summary").append(allCategory.name);
+        //$(".customer-summary-legume").append(allCategory.name);
           allCategory.orders.forEach(function(order){
           $(".customer-summary").append(order.orderSummaryCustomers());
         })
@@ -479,7 +483,7 @@ $(document).ready(function(){
     });
     $(".checkout-farmers").off("click").on("click",function(){
       allCategories.forEach(function(allCategory) {
-        $(".farmer-summary").append(allCategory.name);
+        //$(".farmer-summary-legume").append(allCategory.name);
           allCategory.orders.forEach(function(order){
           $(".farmer-summary").append(order.orderSummaryFamers());
         })

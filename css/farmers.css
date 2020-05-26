@@ -1,23 +1,48 @@
 h1, h2{
     text-align: center;
-    font-family: 'Monoton', cursive;
-    color: purple;
+    font-family: fantasy /*'Monoton', cursive*/;
+    color: yellow;
 }
 h3, h4{
     color: greenyellow;
     font-weight: bolder;
-    font-family: 'Fruktur', cursive;
+    font-family: fantasy /*'Fruktur', cursive*/;
+}
+nav{
+  background-color: black;
+}
+.header{
+  background: url("image/head.jpeg") rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-size: larger;
+  font-weight: bold;
+  font-family: fantasy;
+  height: 40vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 20px;
 }
 body{
-    background: url("image/lettuce.jpg") rgba(0, 0, 0, 0.5) ;
+    background: url("image/green.jpeg") rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     font-size: larger;
     font-weight: bold;
-    font-family: 'Love Ya Like A Sister', cursive;
-    color: white;
-    background-blend-mode: multiply;
+    font-family: serif /*'Love Ya Like A Sister', cursive*/;
+}
+.products{
+  text-align: center;
+}
+.animal, .legume, .fruit, .vegetable, .detail{
+  background: rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  background-blend-mode: multiply;
+  margin-bottom: 20px;
 }
 .another-order, .form1-customers, .form1-farmers{
     display: none;
@@ -31,10 +56,39 @@ body{
   .another-order, .form4-customers, .form4-farmers{
       display: none;
   }
+  /*table{
+    border-spacing: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }*/
+  table{
+    background: rgba(255, 255, 255, 0.5);
+    background-position: center;
+    background-size: cover;
+    color: ;
+    background-blend-mode: multiply;
+  }
+  table, tr, td, th {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  th{
+    font-size: 20px;
+  }
+  td, tr {
+    font-size: 15px;
+    font-family: fantasy;
+  }
 .first {
     font-family: 'hunters script';
     padding: 15px;
     color: black;
     height: 100px;
     text-align: center;
+  }
+  @media only screen and (min-width: 768px){
+    .animal, .legume, .fruit, .vegetable, .detail{
+      margin-left: 10%;
+    }
   }
